@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+Weather app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Що зробила:
+1) запустила реакт на проекті
+2) підключила bootastrap
+3) зробила компоненти для розмітки
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Загальні вимоги
+1. Додаток має використовувати React бібліотеку.
+2. Кастомні стилі мають бути оформленні за допомогою scss.
+3. Можна використовувати готові бібліотеки стилів (bootstrap, tailwind) або ж
+розробити дизайн всіх елементів самостійно.
+4. Додаток має працювати і коректно відображатись в проміжку 320px - 1920px.
+5. Код має бути читабильним та розбитим на логічні блоки.
+6. Код має бути покритий тестами мінімум на 60%.
+7. Можна використовувати додаткові бібліотеки з ліцензіями MIT, ISC.
+8. Додаток має зберігатись в публічному репозиторії на github.
+9. Додаток має бути доступним за адресою.
+https://<ваше_імя>.github.io/<ваш_репозиторій>
+10. Додаток повинен містити README.md файл, в якому має бути описана інформація
+про додаток, а також описані основні вимоги та команди для запуску додатку та
+тестів.
+11. Повідомлення для комітів мають містити змістовну інформацію і описувати дії та
+задачі які були виконані.
+12. При виникнені помилки при роботі з сервером потрібно показувати відповідні
+повідомлення.
+13. Доки інформація завантажується – показувати лоадер.
+14. В кожному додатку має бути сторінка “про додаток”, в якому будуть описані
+можливості, що надає додаток.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Додаток для погоди
+Я, як користувач, хочу мати додаток, в якому я можу отримати потрібну інформацію щодо
+поточної погоди.
+Я хочу мати наступні можливості:
+1. Обрати місто, в якому показувати погоду
+2. Обирати день, на який я хочу подивитись погоду. Має бути доступна поточна дата,
+та 3 дні після неї
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Хочу бачити іконку, як мені одягатися: (потрібні іконки)
+1) якщо температура більше 20 градусів – шорти і футболка
+2) якщо температура 15-20 градусів – штани і худі
+3) якщо температура 5-15 градусів – куртка
+4) якщо температура 0-5 градусів – пальто
+5) якщо температура менше 0 – тепла куртка
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ви можете використовувати https://openweathermap.org/api або будь-яке інше API на ваш
+смак.

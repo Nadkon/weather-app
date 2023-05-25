@@ -1,12 +1,16 @@
+import "./App.css";
+import Form from "./components/Form";
+import Weather from "./components/Weather";
+import Forecast from "./components/Forecast";
 
-import './App.css';
-
-function App() {
+export default function App() {
   return (
     <div className="App">
-      HI
+      <div className="weather">
+        <Form />
+        <Weather />
+        <Forecast />
+      </div>
     </div>
   );
 }
-
-export default App;
