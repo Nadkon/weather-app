@@ -1,6 +1,5 @@
 import React from "react";
 import ShowImage from "./ShowImage";
-import FormattedDate from "./FormattedDate";
 
 export default function WeatherForecastDay(props) {
   function maxTemperature() {
@@ -24,7 +23,7 @@ export default function WeatherForecastDay(props) {
   return (
     <div>
       <div className="forecast-date">{day()}</div>
-      <ShowImage temp={props.data.temp.min} />
+      <ShowImage temp={props.data.temp.day} />
       <div className="forecast-temperature">
         <span className="forecast-temperature-max">{maxTemperature()}</span>
         <span className="forecast-temperature-min">{minTemperature()}</span>

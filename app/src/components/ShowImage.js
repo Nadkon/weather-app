@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function ShowImage(props) {
+  console.log(props.temp)
   if (props.temp > 20) {
     return (
       <img src="https://cdn-icons-png.flaticon.com/128/2934/2934972.png" />
