@@ -4,19 +4,11 @@ body {
   margin: 0 auto;
 }
 
-.logo {
-  width: 100px;
-}
-
 .weather {
   margin-top: 20px;
   border: 2px solid gray;
   border-radius: 10px;
   padding: 10px;
-}
-
-.current-location-btn {
-  align-items: right;
 }
 
 h1 {
@@ -27,12 +19,17 @@ h1 {
   margin: 20px 0px 10px;
 }
 
+h2 {
+  text-align: center;
+  font-style: italic;
+  color: rosybrown;
+}
+
 ul {
   margin: 0;
   padding: 0;
 }
-
-li {
+ul li {
   list-style: none;
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
@@ -40,42 +37,24 @@ li {
   line-height: 20px;
   margin-bottom: 5px;
 }
-
-li:first-letter {
+ul li:first-letter {
   text-transform: capitalize;
 }
-
-.lowercase {
-  text-transform: lowercase;
-}
-
-strong {
+ul li strong {
   color: rgb(246, 82, 130);
 }
 
 .temperature-container {
   margin-top: 45px;
-  letter-spacing: -4px;
 }
-
-a {
-  text-decoration: none;
-  cursor: default;
-}
-
-.temperature-container .active {
-  color: black;
-}
-
-.temperature {
+.temperature-container .temperature {
   color: #212121;
   font-size: 80px;
   font-weight: 700;
   line-height: 1;
   margin-left: 10px;
 }
-
-.unit {
+.temperature-container .unit {
   color: rgb(33, 33, 33);
   font-size: 28px;
   font-weight: 400;
@@ -89,19 +68,23 @@ a {
 }
 
 .forecast-date {
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(35, 5, 117, 0.7);
   font-size: 16px;
   line-height: 20px;
   text-align: center;
 }
 
-.forecast-info img {
+.forecast-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+}
+.forecast-container .forecast-info img {
   display: block;
   margin: 0 auto;
   max-width: 45px;
 }
-
-.forecast-temperature {
+.forecast-container .forecast-temperature {
   color: rgb(246, 82, 130);
   font-size: 14px;
   font-style: normal;
@@ -109,14 +92,10 @@ a {
   line-height: 1.5;
   text-align: center;
 }
-
-.forecast-temperature-min {
+.forecast-container .forecast-temperature span {
+  display: inline-block;
+  margin-left: 2px;
+}
+.forecast-container .forecast-temperature-min {
   opacity: 0.6;
-}
-
-.info {
-  color: rgba(39, 33, 66, 0.4);
-  font-size: 14px;
-  line-height: 18px;
-  margin-top: 40px;
-}
+}/*# sourceMappingURL=index.css.map */

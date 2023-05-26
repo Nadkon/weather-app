@@ -1,5 +1,4 @@
-import "./App.css";
-import Form from "./components/Form";
+import "./styles/index.css";
 import Weather from "./components/Weather";
 
 
@@ -8,7 +7,7 @@ export default function App() {
     <div className="App">
 
         <Weather defaultCity="Kyiv" />
-  
+
     </div>
   );
 }

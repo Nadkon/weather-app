@@ -26,6 +26,7 @@ export default function WeatherForecastDay(props) {
       <ShowImage temp={props.data.temp.day} />
       <div className="forecast-temperature">
         <span className="forecast-temperature-max">{maxTemperature()}</span>
+         <span>...</span>
         <span className="forecast-temperature-min">{minTemperature()}</span>
       </div>
     </div>
