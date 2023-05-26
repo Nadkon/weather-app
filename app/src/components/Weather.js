@@ -2,27 +2,26 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ready:false});
 
   function handleResponse(response) {
     console.log(response.data);
     console.log(response.data.weather[0].main);
 
     setWeatherData({
+      ready: true,
       city: response.data.name,
       date: "25 May 2023",
-      description: response.data.weather[0].main,
+      description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       temperature: response.data.main.temp,
       windSpeed: response.data.wind.speed,
-      imageUrl: "",
+      iconUrl: "",
     });
 
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="weather-info">
         <div className="row">
@@ -54,7 +53,7 @@ export default function Weather() {
           </div>
           <div className="col-6">
             <div className="temperature-container d-flex justify-content-end">
-              <img src={weatherData.imageUrl} alt={weatherData.description} />
+              <img src={weatherData.iconUrl} alt={weatherData.description} />
               <span className="temperature"></span>
               <span className="unit">
                 {Math.round(weatherData.temperature)}°C
