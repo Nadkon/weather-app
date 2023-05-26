@@ -8,8 +8,8 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response.data);
-    console.log(response.data.weather[0].main);
+    // console.log(response.data);
+    // console.log(response.data.weather[0].main);
 
     setWeatherData({
       ready: true,
@@ -19,7 +19,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       temperature: response.data.main.temp,
       windSpeed: response.data.wind.speed,
-      iconUrl: "",
+      iconUrl: "https://cdn-icons-png.flaticon.com/128/2390/2390058.png",
     });
   }
 

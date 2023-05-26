@@ -1,6 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-
+import ShowImage from "./ShowImage";
 
 export default function WeatherInfo(props) {
   return (
@@ -34,7 +34,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col-6">
           <div className="temperature-container d-flex justify-content-end">
-            <img src={props.data.iconUrl} alt={props.data.description} />
+            <ShowImage temp={props.data.temperature} />
             <span className="temperature"></span>
             <span className="unit">{Math.round(props.data.temperature)}°C</span>
           </div>
