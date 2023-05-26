@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="weather">
-        <Form />
+        {/* <Form /> */}
         <Weather defaultCity="Kyiv" />
         <Forecast />
       </div>

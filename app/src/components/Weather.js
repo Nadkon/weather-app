@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from './FormattedDate'
+
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
@@ -24,45 +25,29 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="weather-info">
-        <div className="row">
-          <div className="col-6">
-            <h1 className="city"> {weatherData.city}</h1>
-            <ul>
-              <li>
-                Last updated:
-                <FormattedDate date={ weatherData.date} />
-              </li>
-              <li>
-                <span className="description">{weatherData.description}</span>
-              </li>
-              <li>
-                <ul>
-                  <li>
-                    Humidity:
-                    <strong>
-                      <span className="humidity">{weatherData.humidity}</span>%
-                    </strong>
-                  </li>
-                  Wind:
-                  <strong className="lowercase">
-                    <span>{weatherData.windSpeed}</span>m/h
-                  </strong>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="col-6">
-            <div className="temperature-container d-flex justify-content-end">
-              <img src={weatherData.iconUrl} alt={weatherData.description} />
-              <span className="temperature"></span>
-              <span className="unit">
-                {Math.round(weatherData.temperature)}°C
-              </span>
-            </div>
-          </div>
+      <div>
+            <form className="mb-2">
+      <div className="row">
+        <div className="col-8">
+          <input
+            type="search"
+            placeholder="Type a city name..."
+            className="form-control"
+            autoComplete="off"
+          />
+        </div>
+        <div className="col-4">
+          <input
+            type="submit"
+            value="Search"
+            className="btn btn-primary w-100"
+          />
         </div>
       </div>
+    </form>
+        <WeatherInfo data={ weatherData} />
+      </div>
+
     );
   } else {
     let unit = "metric";
