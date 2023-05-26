@@ -8,7 +8,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-
+    console.log(response.data.name);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -18,14 +18,14 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       temperature: response.data.main.temp,
       windSpeed: response.data.wind.speed,
-      iconUrl: "https://cdn-icons-png.flaticon.com/128/2390/2390058.png",
+      // iconUrl: "https://cdn-icons-png.flaticon.com/128/2390/2390058.png",
     });
   }
 
   function search() {
     let unit = "metric";
     // const apiKey = "be60748992fab0f5da8162563fb21245";
-    const apiKey = "c6f8ef4575250284954db9f4dfa7a996";
+    const apiKey = "46fac47dd8b8fa26d1b6852218ad3dfe";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -41,7 +41,7 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div>
+      <div className="weather">
         <form className="mb-2" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-8">
