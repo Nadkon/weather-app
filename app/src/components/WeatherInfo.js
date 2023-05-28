@@ -21,19 +21,19 @@ export default function WeatherInfo(props) {
                 <li>
                   Humidity:
                   <strong>
-                    <span className="humidity">{props.data.humidity}</span>%
+                    <span className="humidity"> {props.data.humidity}</span>%
                   </strong>
                 </li>
                 Wind:
                 <strong className="lowercase">
-                  <span>{props.data.windSpeed}</span>m/h
+                  <span> {props.data.windSpeed}</span>m/h
                 </strong>
               </ul>
             </li>
           </ul>
         </div>
         <div className="col-6">
-          <div className="temperature-container d-flex justify-content-end">
+          <div className="temperature-container d-flex justify-content-end flex-column-reverse flex-sm-row">
             <ShowImage temp={props.data.temperature} />
             <span className="temperature"></span>
             <span className="unit">{Math.round(props.data.temperature)}°C</span>
