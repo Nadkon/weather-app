@@ -35,7 +35,7 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let apiKey = "46fac47dd8b8fa26d1b6852218ad3dfe";
+    let apiKey = "1dbf926d3b4417bf379db7043bec1047";
     let unit = "metric";
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
